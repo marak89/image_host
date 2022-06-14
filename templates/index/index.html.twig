@@ -2,37 +2,8 @@
 
 {% block title %}{{ parent() }}Strona główna{% endblock %}
 
-{% block body %}
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="{{ path('app_index') }}">Uploader</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor2" aria-controls="navbarColor2" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarColor2">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item ">
-                        <a class="nav-link {% if app.request.get('_route') == 'app_index' %}active{% endif %}" href="{{ path('app_index') }}">Strona główna</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Najnowsze</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Moje zdjęcia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Wyloguj się</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Zaloguj się</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Zarejestruj się</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+{% block content %}
+
     <div class="container">
         <div class="card mt-5">
             <div class="card-body">
@@ -155,14 +126,5 @@
 
         </div>
     </section>
-<!--FOOTER -->
-    <footer>
-        <div class="pt-3 pb-3 bg-secondary">
-            <span class="d-block text-center text-white">
-                <a class="text-white" href="http://m89.eu">m89.eu</a>
-                -
-                <a class="text-white" href="{{ path('app_index') }}">Hosting zdjęć</a>
-            </span>
-        </div>
-    </footer>
+
 {% endblock %}
